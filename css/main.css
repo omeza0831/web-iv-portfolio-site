@@ -1,3 +1,143 @@
 @charset "UTF-8";
 /* CSS Document */
 
+* {
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+.row {
+	overflow: auto;
+}
+
+.col {
+	float: left;
+}
+
+
+body{
+	background-color: #d4d4d4;
+}
+
+footer {
+	background-color: #eda998;
+}
+
+img[src*="img/background-img.png"], img[src*="img/works-photo.jpg"] {
+	margin: 200px auto;
+	display: block;
+}
+
+span {
+	display: none;
+}
+
+li {
+	list-style: none;
+}
+
+h1 {
+	margin: 125px auto;
+	text-align: center;
+	font-size: 50px;
+}
+
+#works header  {
+	transform: rotate(-90deg);
+    transform-origin: right, top;
+    -ms-transform: rotate(-90deg);
+    -ms-transform-origin:right, top;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin:right, top;
+}
+
+nav a {
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 0 auto;
+	color: #3d3935;
+}
+
+nav a:hover {
+	color: #eda998;
+}
+
+nav li {
+	display: inline-block;
+	list-style: none;
+}
+
+nav li:nth-child(2), nav li:nth-child(3), nav li:last-child {
+	margin-left: 25px;
+}
+
+nav {
+	margin: 50px auto;
+	text-align: center;
+}
+
+ul {
+	padding-left: 0;
+}
+
+ul a, li {
+	display: inline-block;
+}
+
+footer ul {
+	margin: 0;
+	text-align: center;
+}
+
+footer ul a {
+	width: 54px;
+	height: 54px;
+	margin: 50px auto;
+}
+
+footer li:first-child a {
+	background: url("../img/facebook.png") no-repeat 0 0;
+}
+
+footer li:nth-child(2) a {
+	background: url("../img/instagram.png") no-repeat 0 0;
+	margin-left: 25px;
+}
+
+footer li:last-child a {
+	background: url("../img/twitter.png") no-repeat 0 0;
+	margin-left: 25px;
+}
+
+footer li a:hover {
+	background-position: 0 -54px;
+}
+
+#about-photo {
+	background: url("../img/about.jpg") no-repeat center;
+	background-size: contain;
+	height: 724px;
+	margin: 0 0 175px 0;
+}
+
+
+#works .col {
+	width: 292px;
+	height: 292px;
+	text-align: right;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+#works header {
+	text-align: left;
+	position: absolute;
+	top: 50px;
+	left: -50px;
+}
