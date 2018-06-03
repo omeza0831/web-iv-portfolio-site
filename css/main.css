@@ -3,6 +3,10 @@
 
 * {
 	font-family: 'Montserrat', sans-serif;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
@@ -19,6 +23,22 @@
 	float: left;
 }
 
+#works-gum div p {
+	width: 325px;
+}
+
+#works-gum img {
+	margin-bottom: 170px;
+}
+
+#works-gum div:last-child {
+	margin-left: 83px;
+}
+
+#about-me p, #works-gum div p {
+	line-height: 35px;
+	font-size: 20px;
+}
 
 body{
 	background-color: #d4d4d4;
@@ -33,6 +53,11 @@ img[src*="img/background-img.png"], img[src*="img/works-photo.jpg"] {
 	display: block;
 }
 
+img[src*="img/about.jpg"]  {
+	margin: 200px auto 100px;
+	display: block;
+}
+
 span {
 	display: none;
 }
@@ -41,19 +66,14 @@ li {
 	list-style: none;
 }
 
+h2 {
+	font-weight: 600;
+}
+
 h1 {
 	margin: 125px auto;
 	text-align: center;
 	font-size: 50px;
-}
-
-#works header  {
-	transform: rotate(-90deg);
-    transform-origin: right, top;
-    -ms-transform: rotate(-90deg);
-    -ms-transform-origin:right, top;
-    -webkit-transform: rotate(-90deg);
-    -webkit-transform-origin:right, top;
 }
 
 nav a {
@@ -89,6 +109,10 @@ ul a, li {
 	display: inline-block;
 }
 
+footer {
+	margin-top: 250px;
+}
+
 footer ul {
 	margin: 0;
 	text-align: center;
@@ -118,26 +142,90 @@ footer li a:hover {
 	background-position: 0 -54px;
 }
 
-#about-photo {
-	background: url("../img/about.jpg") no-repeat center;
-	background-size: contain;
-	height: 724px;
-	margin: 0 0 175px 0;
-}
-
-
-#works .col {
-	width: 292px;
-	height: 292px;
-	text-align: right;
-	position: relative;
-	top: 0;
-	left: 0;
-}
-
 #works header {
 	text-align: left;
 	position: absolute;
 	top: 50px;
 	left: -50px;
 }
+
+label, form p {
+	display: block;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+input {
+	height: 75px;
+}
+
+textarea, input {
+	width: 570px;
+	background-color: #eda998;
+	border: none;
+	margin-bottom: 130px;
+}
+
+textarea {
+	height: 200px;
+}
+
+#about-me div {
+	display: inline-block;
+	width: 325px;
+	margin: 25px;
+}
+
+#about-me div:first-child {
+	float: left;
+	margin-left: 125px;
+}
+
+#about-me div:last-child {
+	float: right;
+	margin-right: 125px;
+}
+
+/* BEGIN TRANSFORMED HEADERS*/
+
+#works .col {
+	width: 292px; /* full width for 4 equal columns */
+	text-align: right;  /* aligns the image to the right */
+	position: relative; /* relative positioning allows the header to be positioned in relation to this element */ 
+	top: 0;
+	left: 0;
+}
+
+#works header  {
+	-ms-transform: rotate(-90deg); /* IE 9 */
+	-webkit-transform: rotate(-90deg); /* Safari and Chrome */
+	-moz-transform: rotate(-90deg); /* Firefox */
+	-o-transform: rotate(-90deg); /* Opera */
+	transform: rotate(-90deg);  /* transformed text to run bottom to top */ 
+	position: absolute; /* abosulte positioning so that the end of the text can be aligned to the top of the image */
+}
+
+#works .col:first-child header { /* because the text is running bottom to top instead of top to bottom, you'll have to create unique vertical and horizontal positions for each header to align to its respective image */
+	top: 53px;
+    left: -23px;
+}
+
+#works .col:nth-child(2) header {
+	top: 60px;
+    left: -25px;
+}
+
+#works .col:nth-child(3) header {
+	top: 29px;
+    left: 6px;
+}
+
+#works .col:last-child header {
+	top: 50px;
+    left: -20px;
+}
+
+/* need to create top/left values for third and last column */ 
+
+/* END TRANSFORMED HEADERS*/
