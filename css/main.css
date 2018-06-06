@@ -1,6 +1,30 @@
 @charset "UTF-8";
 /* CSS Document */
 
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Typography
+	1.1 - Headings
+	1.2 - Body Copy
+	1.3 - Buttons
+	1.4 - Forms
+	1.5 - Lists
+	1.6 - Tables
+2.0 - Navigation Menus
+	2.1 - Main
+	2.2 - Sub
+	2.3 - Footer
+3.0 - Content
+	3.1 - Site Structure
+	3.2	- Site Header
+	3.3	- Site Footer
+5.0 - Utility
+	5.1 - Text Sizes
+	5.2 - Colors
+	5.3 - Alignments
+--------------------------------------------------------------*/
 * {
 	font-family: 'Montserrat', sans-serif;
 	-moz-box-sizing: border-box;
@@ -10,85 +34,80 @@
 	box-sizing: border-box;
 }
 
-.wrapper {
-	margin: 0 auto;
-	width: 1170px;
-}
-
-.row {
-	overflow: auto;
-}
-
-.col {
-	float: left;
-}
-
-#works-gum div p {
-	width: 325px;
-}
-
-#works-gum img {
-	margin-bottom: 170px;
-}
-
-#works-gum div:last-child {
-	margin-left: 83px;
-}
-
-#about-me p, #works-gum div p {
-	line-height: 35px;
-	font-size: 20px;
-}
-
-body{
-	background-color: #d4d4d4;
-}
-
-footer {
-	background-color: #eda998;
-}
-
-img[src*="img/background-img.png"], img[src*="img/works-photo.jpg"] {
-	margin: 200px auto;
-	display: block;
-}
-
-img[src*="img/about.jpg"]  {
-	margin: 200px auto 100px;
-	display: block;
-}
-
+/*----- 1.0 - Typography -----*/
 span {
 	display: none;
+}
+
+h2, form a {
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+#works a {
+	text-decoration: none;
+}
+
+form a, label, form p, nav a {
+	text-transform: uppercase;
+}
+
+/*----- 1.4 - Forms -----*/
+form a {
+	text-decoration: none;
+	padding: 15px 25px;
+}
+
+label, form p {
+	display: block;
+	margin-bottom: 30px;
+}
+
+form div {
+	margin: 0 auto;
+	width: 570px;
+}
+
+textarea {
+	margin-bottom: 30px;
+	height: 200px;
+}
+
+input {
+	height: 75px;
+}
+
+textarea, input {
+	width: 570px;
+	border: none;
+}
+
+input {
+	margin-bottom: 130px;
+}
+
+/*----- 1.5 - Lists -----*/
+ul {
+	padding-left: 0;
 }
 
 li {
 	list-style: none;
 }
 
-h2 {
-	font-weight: 600;
-}
+/*----- 2.0 - Navigation Menus -----*/
 
-h1 {
-	margin: 125px auto;
-	text-align: center;
-	font-size: 50px;
-}
-
+	/*----- 2.1 - Main -----*/
 nav a {
 	text-decoration: none;
-	text-transform: uppercase;
 	margin: 0 auto;
 	color: #3d3935;
 }
 
-nav a:hover {
-	color: #eda998;
-}
-
 nav li {
-	display: inline-block;
 	list-style: none;
 }
 
@@ -101,23 +120,9 @@ nav {
 	text-align: center;
 }
 
-ul {
-	padding-left: 0;
-}
+	/*----- 2.2 - Sub -----*/
 
-ul a, li {
-	display: inline-block;
-}
-
-footer {
-	margin-top: 250px;
-}
-
-footer ul {
-	margin: 0;
-	text-align: center;
-}
-
+	/*----- 2.3 - Footer -----*/
 footer ul a {
 	width: 54px;
 	height: 54px;
@@ -142,6 +147,48 @@ footer li a:hover {
 	background-position: 0 -54px;
 }
 
+/*----- 3.0 - Content -----*/
+
+	/*----- 3.1 - Site Structure -----*/
+#about-me div {
+	width: 325px;
+	margin: 25px;
+}
+
+#about-me div:last-child {
+	float: right;
+}
+
+#about-me div:first-child, #about-me div:last-child {
+	margin-right: 125px;
+}
+
+img[src*="img/background-img.png"], img[src*="img/works-photo.jpg"] {
+	margin: 200px auto;
+}
+
+img[src*="img/about.jpg"]  {
+	margin: 200px auto 100px;
+}
+
+img[src*="img/background-img.png"], img[src*="img/works-photo.jpg"], img[src*="img/about.jpg"] {
+	display: block;
+}
+
+.wrapper {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+.row {
+	overflow: auto;
+}
+
+.col, #about-me div:first-child {
+	float: left;
+}
+
+	/*-----3.2	- Site Header -----*/
 #works header {
 	text-align: left;
 	position: absolute;
@@ -149,45 +196,75 @@ footer li a:hover {
 	left: -50px;
 }
 
-label, form p {
-	display: block;
-	text-transform: uppercase;
+h1 {
+	margin: 125px auto;
+}
+
+	/*-----3.3	- Site Footer -----*/
+footer {
+	margin-top: 250px;
+}
+
+footer ul {
+	margin: 0;
+}
+
+/*----- 5.0 - Utility -----*/
+
+	/*----- 5.1 - Text Sizes -----*/
+label, form p, #about-me p, #works-gum div p {
 	font-size: 20px;
-	margin-bottom: 30px;
 }
 
-input {
-	height: 75px;
+	/*-----5.2 - Colors -----*/
+body{
+	background-color: #d4d4d4;
 }
 
-textarea, input {
-	width: 570px;
+footer, textarea, input, form a {
 	background-color: #eda998;
-	border: none;
-	margin-bottom: 130px;
 }
 
-textarea {
-	height: 200px;
+form a:hover {
+	background-color: #000;
 }
 
-#about-me div {
+nav a:hover, #works a:hover, form a:hover {
+	color: #eda998;
+}
+
+#works a, form a {
+	color: #000;
+}
+
+	/*-----5.3 - Alignments -----*/
+h1, footer ul {
+	text-align: center;
+}
+
+ul a, li, nav li, #about-me div {
 	display: inline-block;
+}
+
+#works-gum div p {
 	width: 325px;
-	margin: 25px;
 }
 
-#about-me div:first-child {
-	float: left;
-	margin-left: 125px;
+#works-gum img {
+	margin-bottom: 170px;
 }
 
-#about-me div:last-child {
-	float: right;
-	margin-right: 125px;
+#works-gum div:last-child {
+	margin-left: 83px;
 }
 
-/* BEGIN TRANSFORMED HEADERS*/
+#about-me p, #works-gum div p {
+	line-height: 35px;
+}
+
+#about-me p:first-child {
+	margin-left: 100px
+}
 
 #works .col {
 	width: 292px; /* full width for 4 equal columns */
@@ -225,7 +302,3 @@ textarea {
 	top: 50px;
     left: -20px;
 }
-
-/* need to create top/left values for third and last column */ 
-
-/* END TRANSFORMED HEADERS*/
